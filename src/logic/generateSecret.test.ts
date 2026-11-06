@@ -13,8 +13,8 @@ describe("generateSecret", () => {
   });
 
   it("uses only digits valid for the base", () => {
-    const secret = generateSecret(3, 2, () => 0.9);
-    expect(secret).toMatch(/^[01]{3}$/);
+    const secret = generateSecret(3, 8, () => 0.9);
+    expect(secret).toMatch(/^[0-7]{3}$/);
   });
 
   it("is deterministic when given a fixed random source", () => {
