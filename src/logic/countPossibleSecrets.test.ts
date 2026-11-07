@@ -9,16 +9,12 @@ describe("countPossibleSecrets", () => {
   });
 
   it("counts permutations without repetition", () => {
-    // P(10, 2) = 10 * 9 = 90
     expect(countPossibleSecrets(2, 10)).toBe(90);
-    // P(10, 4) = 10 * 9 * 8 * 7 = 5040
     expect(countPossibleSecrets(4, 10)).toBe(5040);
-    // P(2, 2) = 2 * 1 = 2
     expect(countPossibleSecrets(2, 2)).toBe(2);
   });
 
   it("returns 1 when length equals base", () => {
-    // P(10, 10) = 10! = 3628800
     expect(countPossibleSecrets(10, 10)).toBe(3628800);
     expect(countPossibleSecrets(2, 2)).toBe(2);
   });
@@ -37,7 +33,6 @@ describe("countPossibleSecrets", () => {
   });
 
   it("handles hex base", () => {
-    // P(16, 2) = 16 * 15 = 240
     expect(countPossibleSecrets(2, 16)).toBe(240);
   });
 
@@ -45,7 +40,6 @@ describe("countPossibleSecrets", () => {
     const first = countPossibleSecrets(6, 10);
     const second = countPossibleSecrets(6, 10);
     expect(first).toBe(second);
-    // P(10, 6) = 10*9*8*7*6*5 = 151200
     expect(first).toBe(151200);
   });
 });
