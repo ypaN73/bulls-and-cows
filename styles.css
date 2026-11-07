@@ -1,0 +1,232 @@
+:root {
+  --bg: #0f172a;
+  --surface: #1e293b;
+  --border: #334155;
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --accent: #38bdf8;
+  --accent-hover: #0ea5e9;
+  --radius: 8px;
+  --gap: 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 24px 16px;
+}
+
+#app {
+  width: 100%;
+  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+h1,
+h2 {
+  margin: 0;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 1.6rem;
+}
+
+h2 {
+  font-size: 1.1rem;
+}
+
+/* forms */
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+select,
+input,
+button {
+  font: inherit;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 10px 12px;
+}
+
+select:focus,
+input:focus,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+button {
+  cursor: pointer;
+  background: var(--accent);
+  color: #0f172a;
+  font-weight: 600;
+  border: none;
+  transition: background 0.15s;
+}
+
+button:hover {
+  background: var(--accent-hover);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* settings */
+.settings,
+.guess-input,
+.history,
+.result,
+.leaderboard {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+}
+
+.settings__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  margin-top: var(--gap);
+}
+
+.settings__variants {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* guess input */
+.guess-input {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap);
+  align-items: center;
+}
+
+.guess-input input {
+  flex: 1 1 160px;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 1.1rem;
+  letter-spacing: 0.2em;
+  text-transform: lowercase;
+}
+
+.guess-input__message {
+  flex-basis: 100%;
+  margin: 0;
+  color: #f87171;
+  font-size: 0.85rem;
+}
+
+.guess-input__message:empty {
+  display: none;
+}
+
+/* history */
+.history__list {
+  list-style: none;
+  margin: var(--gap) 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.history__item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background: var(--bg);
+  border-radius: var(--radius);
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.9rem;
+}
+
+.history__item:last-child {
+  font-weight: 600;
+}
+
+.history__guess {
+  letter-spacing: 0.15em;
+}
+
+.history__result {
+  color: var(--muted);
+}
+
+.history__empty {
+  margin: var(--gap) 0 0;
+  color: var(--muted);
+}
+
+/* game header */
+.game__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.game__mode {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.timer {
+  margin: 0;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  color: var(--muted);
+}
+
+/* result */
+.result h2 {
+  color: var(--accent);
+}
+
+.result__stats {
+  margin: var(--gap) 0;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+}
+
+/* leaderboard */
+.leaderboard ol {
+  list-style: none;
+  margin: var(--gap) 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.leaderboard li {
+  padding: 8px 12px;
+  background: var(--bg);
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+}
