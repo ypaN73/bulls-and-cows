@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { countPossibleSecrets } from "./countPossibleSecrets";
+import { countPossibleSecrets } from "./countPossibleSecrets.js";
 
 describe("countPossibleSecrets", () => {
   it("returns base for length 1", () => {

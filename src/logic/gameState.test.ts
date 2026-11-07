@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { addAttempt, createGameState } from "./gameState";
+import { addAttempt, createGameState } from "./gameState.js";
 
 describe("gameState", () => {
   it("creates initial state with empty attempts and playing status", () => {

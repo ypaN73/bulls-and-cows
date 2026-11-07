@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { generateSecret } from "./generateSecret";
+import { generateSecret } from "./generateSecret.js";
 
 describe("generateSecret", () => {
   it("returns a string of the requested length", () => {
