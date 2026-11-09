@@ -7,7 +7,7 @@ TypeScript · Vitest · ESLint · Prettier · Husky
 
 ## Демо
 
-[`Bulls-and-Cows`](./DESIGN.md)
+https://ypan73.github.io/bulls-and-cows/
 
 ## Запуск
 
